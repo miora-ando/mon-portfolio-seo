@@ -32,18 +32,23 @@ body{
 section{
   padding:80px 20px;
 }
-/* Sections centrées */
+
+/* ================= ALIGNEMENTS GLOBAL ================= */
+
+/* sections centrées */
 .hero-section,
 .cta-section,
 .footer{
   text-align:center;
 }
-/* Sections contenu = alignées à gauche */
+
+/* sections contenu aligné gauche */
 .services-section,
 .about-section{
   text-align:left;
 }
 
+/* titres */
 h1{
   font-size:2.4rem;
   font-weight:800;
@@ -56,23 +61,13 @@ h2{
   margin-bottom:20px;
 }
 
-/* Paragraphes centrés uniquement pour les sections marketing */
+/* paragraphes */
 .hero-section p,
 .services-section > p,
 .about-section > p,
 .cta-section p{
   max-width:750px;
   margin:0 auto 20px;
-}
-
-/* Paragraphes dans les cartes = alignés à gauche */
-.service-card p{
-  text-align:left;
-  margin:8px 0;
-  max-width:none;
-}
-.service-card{
-  text-align:left;
 }
 
 /* ================= HERO ================= */
@@ -90,7 +85,7 @@ h2{
   background-attachment:fixed;
 }
 
-/* overlay premium */
+/* overlay */
 .hero-section::before{
   content:"";
   position:absolute;
@@ -106,7 +101,7 @@ h2{
   padding:20px;
 }
 
-/* ================= HERO TITLE GLOW ================= */
+/* ================= HERO TITLE ================= */
 .hero-content h1{
   text-transform:uppercase;
   color:white;
@@ -125,11 +120,10 @@ h2{
 }
 
 /* ================= HERO AVATAR ================= */
-
 .hero-avatar-wrapper{
   position:relative;
   display:inline-block;
-  margin-bottom:20px;
+  margin:20px auto;
 }
 
 .hero-avatar{
@@ -160,7 +154,7 @@ h2{
     0 30px 80px rgba(0,0,0,0.35);
 }
 
-/* halo glow */
+/* glow derrière avatar */
 .hero-avatar-wrapper::before{
   content:"";
   position:absolute;
@@ -218,19 +212,31 @@ h2{
   background:white;
 }
 
+/* ================= GRID FIX ALIGNEMENT ================= */
 .services-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
   margin-top:40px;
+
+  justify-items:stretch;
+  align-items:start;
 }
 
+/* ================= CARDS ================= */
 .service-card{
   background:white;
   padding:35px;
   border-radius:18px;
   box-shadow:0 10px 30px rgba(0,0,0,.08);
   transition:.3s;
+
+  width:100%;
+  text-align:left;
+
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
 }
 
 .service-card:hover{
@@ -249,9 +255,9 @@ h2{
   background:linear-gradient(135deg,#EED5D0,#F5E6E0);
   color:#4A2C3A;
   padding:60px 20px 30px;
-  text-align:center;
 }
 
+/* newsletter */
 .footer-newsletter form{
   display:flex;
   justify-content:center;
@@ -281,6 +287,7 @@ h2{
   background:var(--primary);
 }
 
+/* social */
 .footer-socials{
   margin:30px 0;
   display:flex;
@@ -302,6 +309,7 @@ h2{
   opacity:0.8;
 }
 
+/* links */
 .footer-links{
   display:flex;
   justify-content:center;
@@ -319,6 +327,7 @@ h2{
   color:var(--secondary);
 }
 
+/* copyright */
 .footer-copy{
   margin-top:20px;
   font-size:0.9rem;
@@ -367,17 +376,17 @@ h2{
     height:180px;
   }
 }
-/* ================= SCROLL REVEAL FIX ================= */
 
+/* ================= SCROLL REVEAL ================= */
 .reveal{
   opacity:0;
   transform:translateY(40px);
   transition:all 1s ease;
-  pointer-events:none; /* 🔥 empêche le blocage des clics */
+  pointer-events:none;
 }
 
 .reveal.active{
   opacity:1;
   transform:translateY(0);
-  pointer-events:auto; /* 🔥 réactive les clics */
+  pointer-events:auto;
 }
