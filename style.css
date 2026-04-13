@@ -315,3 +315,32 @@ p{
     background:#F283AF;
   }
 }
+/* ================= STICKY CTA ================= */
+
+.sticky-cta{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: 0.3s;
+  animation: pulse 2s infinite;
+}
+
+.sticky-cta:hover{
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* animation glow/pulse */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(242,131,175,0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(242,131,175,0); }
+  100% { box-shadow: 0 0 0 0 rgba(242,131,175,0); }
+}
