@@ -31,7 +31,17 @@ body{
 /* ================= GLOBAL ================= */
 section{
   padding:80px 20px;
+}
+/* Sections centrées */
+.hero-section,
+.cta-section,
+.footer{
   text-align:center;
+}
+/* Sections contenu = alignées à gauche */
+.services-section,
+.about-section{
+  text-align:left;
 }
 
 h1{
