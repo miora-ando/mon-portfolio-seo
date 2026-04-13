@@ -46,10 +46,23 @@ h2{
   margin-bottom:20px;
 }
 
-p{
+/* Paragraphes centrés uniquement pour les sections marketing */
+.hero-section p,
+.services-section > p,
+.about-section > p,
+.cta-section p{
   max-width:750px;
-  margin:auto;
-  margin-bottom:20px;
+  margin:0 auto 20px;
+}
+
+/* Paragraphes dans les cartes = alignés à gauche */
+.service-card p{
+  text-align:left;
+  margin:8px 0;
+  max-width:none;
+}
+.service-card{
+  text-align:left;
 }
 
 /* ================= HERO ================= */
