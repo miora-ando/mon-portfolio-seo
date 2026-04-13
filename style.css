@@ -109,7 +109,8 @@ p{max-width:750px;margin:auto;margin-bottom:20px;}
   url("cta.jpg") center/cover fixed;
 }
 
-/* FOOTER */
+/* ================= FOOTER (VERSION AMÉLIORÉE) ================= */
+
 .footer{
   background:#1e1e1e;
   color:white;
@@ -117,56 +118,100 @@ p{max-width:750px;margin:auto;margin-bottom:20px;}
   text-align:center;
 }
 
+/* NEWSLETTER */
+.footer-newsletter{
+  max-width:600px;
+  margin:auto;
+}
+
+.footer-newsletter form{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:15px;
+  flex-wrap:wrap;
+}
+
 .footer-newsletter input{
   padding:12px;
   border:none;
   border-radius:6px;
-  width:240px;
+  width:260px;
 }
 
 .footer-newsletter button{
   padding:12px 18px;
   border:none;
-  background:var(--primary);
+  background:var(--primary, #F283AF);
   color:white;
   border-radius:6px;
-  margin-left:8px;
   cursor:pointer;
-}
-
-.footer-socials{
-  margin:30px 0;
-}
-.footer-socials a{
-  color:white;
-  font-size:22px;
-  margin:0 10px;
   transition:.3s;
 }
-.footer-socials a:hover{
-  color:var(--primary);
+
+.footer-newsletter button:hover{
+  background:#C43670;
+  transform:translateY(-2px);
 }
 
+/* SOCIALS */
+.footer-socials{
+  margin:30px 0;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.footer-socials a{
+  font-size:22px;
+  transition:.3s;
+}
+
+/* couleurs réseaux propres */
+.footer-socials .linkedin{color:#0A66C2;}
+.footer-socials .facebook{color:#1877F2;}
+.footer-socials .tiktok{color:#ffffff;}
+
+.footer-socials a:hover{
+  transform:translateY(-3px);
+  opacity:0.8;
+}
+
+/* LINKS */
 .footer-links{
   display:flex;
   justify-content:center;
   gap:25px;
   margin-bottom:20px;
+  flex-wrap:wrap;
 }
+
 .footer-links a{
   color:white;
   text-decoration:none;
+  transition:.3s;
 }
 
-/* SCROLL REVEAL ANIMATIONS */
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:1s;
+.footer-links a:hover{
+  color:var(--primary, #F283AF);
 }
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
+
+/* COPYRIGHT */
+.footer-copy{
+  margin-top:20px;
+  font-size:0.9rem;
+  opacity:0.7;
 }
-.delay-1{transition-delay:.2s;}
-.delay-2{transition-delay:.4s;}
+
+/* MOBILE */
+@media(max-width:768px){
+  .footer-newsletter form{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .footer-newsletter input{
+    width:100%;
+    max-width:300px;
+  }
+}
