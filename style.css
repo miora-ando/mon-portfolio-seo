@@ -109,11 +109,11 @@ p{max-width:750px;margin:auto;margin-bottom:20px;}
   url("cta.jpg") center/cover fixed;
 }
 
-/* ================= FOOTER (VERSION AMÉLIORÉE) ================= */
+/* ================= FOOTER STYLE ROSÉ (TON IDENTITÉ) ================= */
 
 .footer{
-  background:#1e1e1e;
-  color:white;
+  background: linear-gradient(135deg,#EED5D0,#F5E6E0);
+  color:#4A2C3A;
   padding:60px 20px 30px;
   text-align:center;
 }
@@ -135,22 +135,23 @@ p{max-width:750px;margin:auto;margin-bottom:20px;}
 .footer-newsletter input{
   padding:12px;
   border:none;
-  border-radius:6px;
+  border-radius:10px;
   width:260px;
+  background:white;
 }
 
 .footer-newsletter button{
   padding:12px 18px;
   border:none;
-  background:var(--primary, #F283AF);
+  background:#C43670;
   color:white;
-  border-radius:6px;
+  border-radius:10px;
   cursor:pointer;
   transition:.3s;
 }
 
 .footer-newsletter button:hover{
-  background:#C43670;
+  background:#F283AF;
   transform:translateY(-2px);
 }
 
@@ -165,12 +166,13 @@ p{max-width:750px;margin:auto;margin-bottom:20px;}
 .footer-socials a{
   font-size:22px;
   transition:.3s;
+  color:#4A2C3A;
 }
 
-/* couleurs réseaux propres */
+/* couleurs réseaux (discrètes mais élégantes) */
 .footer-socials .linkedin{color:#0A66C2;}
 .footer-socials .facebook{color:#1877F2;}
-.footer-socials .tiktok{color:#ffffff;}
+.footer-socials .tiktok{color:#4A2C3A;}
 
 .footer-socials a:hover{
   transform:translateY(-3px);
@@ -187,13 +189,14 @@ p{max-width:750px;margin:auto;margin-bottom:20px;}
 }
 
 .footer-links a{
-  color:white;
+  color:#4A2C3A;
   text-decoration:none;
   transition:.3s;
+  font-weight:500;
 }
 
 .footer-links a:hover{
-  color:var(--primary, #F283AF);
+  color:#C43670;
 }
 
 /* COPYRIGHT */
